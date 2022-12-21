@@ -69,4 +69,3 @@ export PATH=$PATH:$HOME/.local/bin
 
 # Env managers
 source $HOME/.ohno_envs
-
