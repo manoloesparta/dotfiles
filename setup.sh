@@ -9,6 +9,3 @@ do
 done
 
 touch $HOME/.ohno_envs
-
-git clone https://github.com/manoloesparta/nvim
-ln -s $ABS_PATH/nvim $ABS_PATH/.config/nvim
