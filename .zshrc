@@ -5,12 +5,15 @@ export LANG=en_US.UTF-8
 export ZSH=$HOME/.oh-my-zsh
 export TERM="xterm-256color"
 
-# Neovim
-alias vim=nvim
-
-# Git helpers
+# Tools
+alias k=kubectl
 alias gitlog="git log --all --graph --decorate"
 alias minigitlog="git log --all --graph --decorate --oneline"
+
+# Neovim
+if [ -d .config/nvim ]; then
+    alias vim=nvim
+fi
 
 # Terminal conf
 export EDITOR=/usr/bin/vim
@@ -30,9 +33,6 @@ alias cdddddd="cd ../../../../.."
 alias please=sudo
 alias huh="grep -rnI * -e"
 
-# Tools
-alias k=kubectl
-
 # Functions
 function blackformat() {
 	git status | grep modified | awk '{ print $2 }' | xargs black
@@ -41,18 +41,6 @@ function blackformat() {
 function cheat() {
 	curl "cheat.sh/$1"
 }
-
-function dockerrm() {
-	docker rm $(docker ps -aq)
-}
-
-function dockerstop() {
-	docker stop $(docker ps -aq)
-}
-
-# Kubernetes
-alias kubectl="minikube kubectl --"
-alias k=kubectl
 
 # Linux only
 if [[ "$(uname)" == "Linux" ]]; then
