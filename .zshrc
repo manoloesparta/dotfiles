@@ -30,6 +30,9 @@ alias cdddddd="cd ../../../../.."
 alias please=sudo
 alias huh="grep -rnI * -e"
 
+# Tools
+alias k=kubectl
+
 # Functions
 function blackformat() {
 	git status | grep modified | awk '{ print $2 }' | xargs black
