@@ -17,6 +17,12 @@ set smartcase
 set noswapfile
 set incsearch
 
+" Match typing
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+
 " Realtive no. line
 set relativenumber
 set rnu
